@@ -1,0 +1,20 @@
+{
+  "name": "animbot",
+  "version": "1.5.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dem0nn/aira-chan.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^11.4.2",
+    "mongoose": "^5.3.9",
+    "ms": "^2.1.1"
+  }
+}
