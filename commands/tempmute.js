@@ -42,7 +42,7 @@ module.exports.run = async(client, message, args) =>{
     }
    
     let mutetime = args[1];
-    if(!mutetime) return message.channel.send('No time detected, please try again')
+    if(!mutetime) return errors.noTime(message);
     await(tomute.addRole(muterole.id))
     
     const embed9 = new Discord.RichEmbed()

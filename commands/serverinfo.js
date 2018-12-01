@@ -6,7 +6,7 @@ module.exports.run = async(client, message, args) =>{
     const embed4 = new Discord.RichEmbed()
       .setColor (config.purple)
       .setThumbnail (servicon)
-      .setDescription (`Information for the server, ${message.guild.name}`   )
+      .setDescription ('Information for the server, Kiri Kiri Basara'   )
       .setAuthor (`${message.author.username}#${message.author.discriminator}`, message.author.avatarURL)
       .addField ('Server Name', message.guild.name)
       .addField ('Created On', message.guild.createdAt)

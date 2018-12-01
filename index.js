@@ -43,7 +43,7 @@ client.on('message', async message => {
   //Command File
   let commandfile = client.commands.get(command.slice(prefix.length));
   if(commandfile){ commandfile.run(client,message,args)}
-  
+
 });
 
 
@@ -59,10 +59,9 @@ client.on('guildMemberAdd', member => {
 client.on('guildMemberRemove', member =>{
   const leaveChannel = member.guild.channels.find(ch => ch.name === 'welcome');
   if (!leaveChannel) return;
-  leaveChannel.send(`Goodbye ${member}. The club shall remember you.`);
+  leaveChannel.send(`Goodbye ${member}. Your legacy will remain forevermore.`);
 })
 
 
 //Login Token
 client.login(config.token);
-
