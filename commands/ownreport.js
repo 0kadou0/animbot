@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
-const config = require('../config.json');
+const config = require(rootDir + "config.json");
+const errors = require(rootDir + "utilities/errors.js");
 
 module.exports.run = async(client, message, args) =>{
     let rPermission = message.member.hasPermission('OWNER', require, true, true)
@@ -16,7 +17,7 @@ module.exports.run = async(client, message, args) =>{
             console.log(e.stack)
         }
     let rUser = message.mentions.members.first()
-    if(!rUser) return message.channel.send('Could not detect user, please try again')
+    if(!rUser) return errors.noUser(message)
     console.log(rUser)
     let kPermission2 = rUser.hasPermission('KICK_MEMBERS', require, true, true)
     console.log(kPermission2)
