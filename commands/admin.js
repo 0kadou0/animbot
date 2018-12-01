@@ -10,7 +10,7 @@ module.exports.run = async(client, message, args) =>{
   console.log(permission)
   if(!permission) return errors.noAdmin(message)
   let reason = args.join(' ').slice(22)
-  let chan = message.guild.channels.find('name','requests')
+  let chan = message.guild.channels.find('name','equests')
   if (!chan){}
       try{
           create = await message.guild.createChannel({
