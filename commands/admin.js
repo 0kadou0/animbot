@@ -5,9 +5,9 @@ const errors = require(rootDir + "utilities/errors.js");
 module.exports.run = async(client, message, args) =>{
   let user = message.mentions.members.first()
   if(!user) return errors.noUser(message)
-  console.log(user)
+  //console.log(user)
   let permission = user.hasPermission('ADMINISTRATOR', require, true, true)
-  console.log(permission)
+  //console.log(permission)
   if(!permission) return errors.noAdmin(message)
   let reason = args.join(' ').slice(22)
   let chan = message.guild.channels.find('name','requests')
